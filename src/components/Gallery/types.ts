@@ -1,6 +1,6 @@
 type Props = {
   products: any[];
-  pagination?: number;
+  pagination: number;
   className?: string;
 };
 

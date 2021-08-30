@@ -1,6 +1,10 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["images.stockx.com", "stockx-assets.imgix.net"],
+    domains: [
+      "images.stockx.com",
+      "stockx-assets.imgix.net",
+      "stockx.imgix.net",
+    ],
   },
 };

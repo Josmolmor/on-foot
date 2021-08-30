@@ -3,7 +3,7 @@ import { FC } from "react";
 import { Container, Content, ProductPagination } from "./styles";
 import ProductCard from "./ProductCard";
 
-const Gallery: FC<Props> = ({ products, className }) => {
+const Gallery: FC<Props> = ({ products, className, pagination }) => {
   return (
     <Container className={className}>
       <Content>
@@ -12,7 +12,7 @@ const Gallery: FC<Props> = ({ products, className }) => {
             <ProductCard name={name} image={media?.imageUrl} />
           ))}
       </Content>
-      <ProductPagination pages={25} />
+      <ProductPagination pages={pagination} />
     </Container>
   );
 };

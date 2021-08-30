@@ -7,7 +7,7 @@ const ProductCard: FC<Props> = ({ className, name, image }) => {
 
   return (
     <Container className={className}>
-      <Img src={image} height={150} width={250} objectFit="cover" />
+      <Img src={image} height={200} width={250} objectFit="contain" />
       <Label>
         {name} <HeartIcon onClick={() => setLiked(!liked)} liked={liked} />
       </Label>
