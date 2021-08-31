@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Heart } from "react-feather";
 
 export const Container = styled.div`
-  align-items: center;
+  align-items: flex-start;
   border: 1px solid transparent;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -20,18 +20,20 @@ export const Container = styled.div`
 
 export const Img = styled(Image)``;
 
-export const Label = styled.span`
-  align-items: center;
+export const Label = styled.div`
+  align-items: flex-start;
   display: flex;
+  flex: 1;
+  flex-direction: column;
   margin-top: 1rem;
-  text-align: center;
+  width: 100%;
 `;
 
 export const HeartIcon = styled(Heart)<{ liked?: boolean }>`
   fill: #eaeaea;
   color: transparent;
-  margin-left: 1rem;
   flex-shrink: 0;
+  margin-left: 0.5rem;
   transition: all 0.25s ease;
 
   ${({ liked }) =>
@@ -48,4 +50,21 @@ export const HeartIcon = styled(Heart)<{ liked?: boolean }>`
     css`
       fill: tomato;
     `}
+`;
+
+export const Info = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const Text = styled.span`
+  display: block;
+  margin-bottom: 0.25rem;
+`;
+
+export const ReleasedText = styled.span`
+  color: #8c8c8c;
+  display: block;
+  margin-top: auto;
 `;
